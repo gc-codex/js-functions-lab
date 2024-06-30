@@ -158,34 +158,162 @@ function calculateTip(a, b) {
 }
 
 console.log('Exercise 7 Result:', calculateTip(50, 20));
-// /*
-// Exercise 8: convertTemperature()
+/*
+Exercise 8: convertTemperature()
 
-// Write a function named convertTemperature. 
-// It takes two arguments: a temperature and a string representing the 
-// scale ('C' for Celsius, 'F' for Fahrenheit). 
-// Convert the temperature to the other scale.
+Write a function named convertTemperature. 
+It takes two arguments: a temperature and a string representing the 
+scale ('C' for Celsius, 'F' for Fahrenheit). 
+Convert the temperature to the other scale.
 
-// Example: convertTemperature(32, 'C') should return 89.6 (Fahrenheit).
-// Example: convertTemperature(32, 'F') should return 0 (Celsius).
+Example: convertTemperature(32, 'C') should return 89.6 (Fahrenheit).
+Example: convertTemperature(32, 'F') should return 0 (Celsius).
 
-// Complete the exercise in the space below:
-// */
-// function convertTemperature(temp, scale) {
-//   //const conversion = temp + ', ' + scale
-//   return conversion;
-
-// let scaleC = (temp * 1.8) + 32
-// let scaleF = (scale - 32) * .56
+Complete the exercise in the space below:
+*/
 
 
-// if (scale === 'C') {
-//   return scaleC;
-// } else if (scale === 'F') {
-// return scaleF
-// }}
+//still working will come back to figure this one out
+/*function convertTemperature(temp, scale) {
+    return temp, scale;
 
 
-// console.log('Exercise 8 Result:', convertTemperature(32, "C"));
+ if (scale === 'C') {
+  return (temp - 32) * .56; 
+} else (scale === 'F') {
+  return (temp * 1.8) + 32;
+} 
+
+// // Calculations for converting C to F and F to C.
+cTemp = (temp * 1.8) + 32;
+fTemp = (temp - 32) * .56;
+}
+
+console.log('Exercise 8 Result:', convertTemperature(32, "C"));
+*/
 
 
+
+
+/*
+Exercise 9: basicCalculator()
+
+Create a function named basicCalculator. 
+It should take three arguments: two numbers and a string representing 
+an operation ('add', 'subtract', 'multiply', 'divide'). 
+Perform the provided operation on the two numbers. 
+In operations where the order of numbers is important, 
+treat the first parameter as the first operand and the 
+second parameter as the second operand.
+
+Example: basicCalculator(10, 5, 'subtract') should return 5.
+
+Complete the exercise in the space below:
+*/
+
+function basicCalculator(firstNum, secondNum, operation) {
+return firstNum - secondNum + " " + operation;
+
+}
+basicCalculator(10, 5, 'substract');
+
+console.log('Exercise 9 Result:', basicCalculator(10, 5, "subtract"));
+
+
+/*
+Exercise 10: calculateGrade()
+
+Define a function called calculateGrade. 
+It should take a numerical score and return the corresponding letter 
+grade (A, B, C, D, F). 
+
+For example, 90 and above yields an 'A', 80-89 is a 'B', 
+and 70-79 is a 'C', 60-69 is a 'D' and anything lower than a 60 is an 'F'.
+
+Example: calculateGrade(100) should return A.
+
+Complete the exercise in the space below:
+*/
+
+function calculateGrade(score) {
+
+  //referenced stackoverflow to for the correct conditional statement to check between two numbers.
+
+  if (score >= 90) {
+    return 'A'
+  } else if (score >= 80 && score <= 89) {
+    return 'B'
+    }  else if (score >= 70 && score <= 79) {
+        return 'C'
+      } else if (score >= 60 && score <= 69) {
+          return 'D'
+        } else {return 'F'};
+  
+  } 
+
+/* Tried using switch statement to shorten the code but could not resolve the issue.
+switch (calculateGrade) {
+  case >= 90 : return 'A';
+    break;
+    case >= 80 && <= 89 : return 'B';
+    break;
+    case >= 70 && <= 79 : return 'C';
+    break;
+    case >= 60 && <= 69 : return 'D';
+    break;
+      default:
+        < 60 : return 'F';
+        break;
+ }  */ 
+ 
+console.log('Exercise 10 Result:', calculateGrade(85));
+
+
+/*
+Exercise 11: createUsername()
+
+Define a function called createUsername. 
+It should take a first name and a last name and return a username. 
+
+The username should be a combination of the following:
+- The first three letters of the first name.
+- The first three letters of the last name.
+- The total character count of the first and last name combined.
+
+Example: createUsername('Samantha', 'Green') should return 'SamGre12'.
+
+Complete the exercise in the space below:
+*/
+function createUsername(firstName, lastName) {
+ return firstName + lastName;
+}
+let length = 3;
+userName = firstName + lastName;
+ 
+ let userFirstName = firstName.substring(0, length);
+ console.log(userFirstName);
+ let userLastName = lastName.substring(0, lenght);
+console.log(userName.length);
+
+
+
+
+console.log('Exercise 11 Result:', createUsername("Samantha", "Green"));
+
+
+/*
+Exercise 12: numArgs()
+
+Challenge yourself with numArgs. 
+This function should return the count of arguments passed to it when called.
+
+Complete the exercise in the space below:
+*/
+// function countOfArgs(num1, num2, num3, num4){
+//   num = calls(number);
+//   let i + 1; i , arguments.length; i++) {
+//     console.log(countOfArgs.length);
+// }
+
+
+console.log('Exercise 12 Result:', numArgs(1, 2, 3, 4));
